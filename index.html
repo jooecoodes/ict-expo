@@ -4,144 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ICT Strand Definition</title>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            background: #0c192c;
-        }
-        .container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            perspective: 1000px;
-        }
-        .circle {
-            width: 300px;
-            height: 300px;
-            background-color: rgba(255, 255, 255, 0.001);
-            border-radius: 50%;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.1s ease;
-            border: 1px solid white;
-        }
-
-        #letter-i {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        #letter-c {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        #letter-t {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
-        .circle2 {
-            width: 250px;
-            height: 250px;
-            position: absolute;
-            top: 30px;
-            left: 25px;
-        }
-        .circle3 {
-            width: 200px;
-            height: 200px;
-            position: absolute;
-            top: 30px;
-            left: 25px;
-        }
-
-        .line-to-dialog {
-            width: 50px;
-            height: 1px;
-            background-color: black;
-            position: absolute;
-        }
-        .line-to-dialog2 {
-            width: 75px;
-            height: 1px;
-            background-color: black;
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            transform: rotate(-80deg);
-        }
-        .dialog-box {
-            width: 300px;
-            height: 125px;
-            background-color: brown;
-            position: absolute;
-            top: -180px;
-            left: 63px;
-            
-        }
-        .display-i-dialog, .display-c-dialog,  .display-t-dialog {
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0.6s, opacity 0.6s; 
-
-        }
-        
-
-        /* on hover  */
-        
-        #letter-i:hover .display-i-dialog,
-#letter-c:hover .display-c-dialog,
-#letter-t:hover .display-t-dialog {
-    cursor: pointer;
-    visibility: visible;
-  opacity: 1;
-}
-
-.bubbles {
-    position: absolute;
-    left: 0%;
-    display: flex;
-    weight: 100vw;
-}
-    /* background  */
-    .bubbles span {
-        width: 30px;
-        height: 30px;
-        position: relative;
-        background: #4fc3dc ;
-        margin:  0 4px;
-        border-radius: 50%;
-        box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc ;
-        animation: animate 15s linear infinite;
-        animation-duration: calc(125s / var(--i));
-    }
-    
-    /* animations  */
-    .bubbles span:nth-child(even) {
-        background: #ff2d75;
-        box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
-    }
-    @keyframes animate {
-        0% {
-            transform: translateY(100vh) scale(0);
-        }
-        100% {
-            transform: translateY(-19vh) scale(1);
-        }
-    }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="bubbles">
@@ -203,85 +67,47 @@
     </div>
     <div class="container">
       
-        <div class="circle">
-            <div id="letter-i">C
-                <div class="display-i-dialog">
-                    <div class="line-to-dialog"></div>
-                <div class="line-to-dialog2"></div>
-                <div class="dialog-box">
-                    asdasdasdasdas
-                </div>
-                </div>
-                
-            </div>
-            <div id="letter-c">I
+        <div class="circle circle1">
+            <div id="letter-c">
+                C
                 <div class="display-c-dialog">
                     <div class="line-to-dialog"></div>
                 <div class="line-to-dialog2"></div>
                 <div class="dialog-box">
-                    asdasdasdasdas
+                    <span>Communication</span>
+                    Communication skills are crucial in the ICT field. Students learn how to communicate ideas, data, and information effectively using various digital platforms and tools. This includes written communication, verbal communication, and digital communication methods such as email, messaging, and social media.
+                </div>
+                </div>
+                
+            </div>
+            <div id="letter-i">
+                I
+                <div class="display-i-dialog">
+                    <div class="line-to-dialog"></div>
+                <div class="line-to-dialog2"></div>
+                <div class="dialog-box">
+                    <span>Information</span>
+                    In the ICT strand, students learn how to effectively gather, process, manage, and utilize information. This includes understanding how to access information from various sources, critically evaluate its credibility and relevance, and organize it for efficient use.
                 </div>
                 </div>
             </div>
-            <div id="letter-t">T
+            <div id="letter-t">
+                T
                 <div class="display-t-dialog">
                     <div class="line-to-dialog"></div>
                 <div class="line-to-dialog2"></div>
                 <div class="dialog-box">
-                    asdasdasdasdas
+                    <span>Technology</span>
+                    The 'T' in ICT refers to technology. Students in the ICT strand study various technologies, including hardware, software, networks, and digital systems. They learn how to use technology tools and applications to solve problems, create solutions, and innovate in different contexts.
                 </div>
                 </div>
             </div>
             <div class="circle circle2">
+                <div class="blocker blocker1"></div>
                 <div class="circle circle3"></div>
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const circle = document.querySelector('.circle');
-            const sensitivity1 = 0.09; // Adjust sensitivity here for circle
 
-            document.addEventListener('mousemove', (e) => {
-                const { clientX, clientY } = e;
-                const rect = circle.getBoundingClientRect();
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-                const deltaX = (clientX - centerX) * sensitivity1;
-                const deltaY = (clientY - centerY) * sensitivity1;
-                circle.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const circle2 = document.querySelector('.circle2');
-            const sensitivity2 = -0.02; // Adjust sensitivity here for circle2
-
-            document.addEventListener('mousemove', (e) => {
-                const { clientX, clientY } = e;
-                const rect = circle2.getBoundingClientRect();
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-                const deltaX = (clientX - centerX) * sensitivity2;
-                const deltaY = (clientY - centerY) * sensitivity2;
-                circle2.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const circle2 = document.querySelector('.circle3');
-            const sensitivity2 = -0.02; // Adjust sensitivity here for circle2
-
-            document.addEventListener('mousemove', (e) => {
-                const { clientX, clientY } = e;
-                const rect = circle2.getBoundingClientRect();
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-                const deltaX = (clientX - centerX) * sensitivity2;
-                const deltaY = (clientY - centerY) * sensitivity2;
-                circle2.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-            });
-        });
-    </script>
 </body>
 </html>
