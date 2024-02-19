@@ -1,35 +1,4 @@
-body {
-    background-color: wheat;
-}
-
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.circle {
-    width: 600px;
-    height: 600px;
-    background-color: orange;
-    border-radius: 50%;
-    position: relative;
-}
-#letter-i {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-#letter-c {
-    position: absolute;
-    top: 0;
-    left: 0;
+* {
+    margin: 0;
     
-}
-#letter-t {
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
