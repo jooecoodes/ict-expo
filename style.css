@@ -198,12 +198,18 @@ body, html {
 /* content description part  */
 
 .network-span:hover .display-networks, .software-span:hover .display-software, .technology-span:hover .display-technology-tools, .messaging-span:hover .display-messaging, .social-media-span:hover .display-social-media, .email-span:hover .display-email, .hardware-span:hover .display-hardware, .gather-span:hover .display-gather, .process-span:hover .display-process, .manage-span:hover .display-manage, .utilize-info-span:hover .display-utilize-info, .various-span:hover .display-various, .digital-span:hover .display-digital {
+    cursor: pointer;
     visibility: visible;
+    
+    opacity: 1;
 }
  
  
 
-.display-technology-tools, .display-networks, .display-software, .display-messaging, .display-social-media, .display-email, .display-hardware, .display-gather, .display-process, .display-manage, .display-utilize-info, .display-various, .display-digital {
+.display-technology-tools, .display-networks, .display-software, .display-messaging, .display-social-media, .display-email, .display-hardware, .display-gather, .display-process, .display-manage, .display-utilize-info, .display-various, .display-digital 
+{
+    opacity: 0;
+    transition: visibility 0.6s, opacity 0.6s; 
     position: absolute;
     top: 30px;
     left: 20px;
@@ -314,6 +320,31 @@ body, html {
     left: -380px;
     height: 180px;
 }
+/* various sources  */
+
+.line-1-various {
+    position: absolute;
+    top: 50px;
+    left:  -75px;
+    transform: rotate(110deg);
+    width: 125px;
+}
+
+.line-2-various {
+    position: absolute;
+    top: 100px;
+    left: -180px;
+    background-color: #ff2d75;
+    width: 150px;
+    height: 2px;
+}
+.content-various {
+    position: absolute;
+    top: 70px;
+    left: -420px;
+    height: 130px;
+}
+
 /* on hover  */
 
 #letter-c:hover .display-c-dialog,
