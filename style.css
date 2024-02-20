@@ -66,8 +66,9 @@ body, html {
 }
 
 #letter-t::first-letter {
+    position: absolute;
+    left: -300px;
     color: #ff2d75;
-    
     font-size: 2.5em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 50%;
@@ -792,7 +793,7 @@ body, html {
 .content-web-development {
     position: absolute;
     width: 350px;
-    height: 200px;
+    height: 225px;
     top: -380px;
     left: -70px;
     background-color: #73224F;
@@ -871,6 +872,46 @@ background: #ff2d75;
 box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
 }
 
+/* footer  */
+
+footer p {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: wheat;
+    font-size: 1.5em;
+}
+footer p .name a {
+    color:#4fc3dc;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+footer p .name a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 85px;
+    width: 0px;
+    height: 2px;
+    background-color: #4fc3dc;
+    transition: width 0.6s ease-in-out;
+}
+
+footer p .name a:hover::after { 
+    width: 175px; 
+}
+
+footer p .all-rights-part {
+    margin-left: 5px;
+    color: #ff2d75;
+}
+
+footer p .first-part{
+    margin-left: 5px;
+    color: #ff2d75;
+}
 /* keyframes  */
 
 @keyframes animate {
@@ -904,4 +945,16 @@ box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
       transform: translateY(0); /* Return to start position */
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Wider shadow upon landing */
     }
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateX(0);
   }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
